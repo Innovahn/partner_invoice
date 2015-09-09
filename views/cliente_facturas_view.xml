@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<openerp>
+<data>
+<record model="ir.ui.view" id="partner_factura_form_view">
+          <field name="name">facura.cliente.concialada</field>
+          <field name="model">res.partner</field>
+          <field name="inherit_id" ref="base.view_partner_form"/>
+          <field name="arch" type="xml">
+            <notebook position="inside">
+                 <page string="Estado de Cuenta">
+		       <div class="oe_right oe_button_box" name="followup_button">
+                            <button name="do_print_payment" string="Imprimir pagos pendientes"/>
+                        </div>			
+			<br/>
+			<p class="oe_grey">
+                            A continuación está el historial de las transacciones de este cliente.
+                            Puede marcar "No seguir" para excluirlo
+                            de las siguientes acciones de seguimiento.
+                        </p>
+		     <separator string="Estado de cuenta de cliente"/>
+                      <field name="facturas_ids" nolabel="1" colspan="4" mode="tree">
+			<tree colors="blue:state == 'draft';black:state in ('proforma','proforma2','open');gray:state == 'cancel'" string="Invoice">
+	               <field name="number"/>
+	               <field name="date_invoice"/>
+			 <field name="date_due"/>
+			<field name="origin"/>
+			<field name="residual" sum="Residual Amount"/>
+	               <field name="amount_total" sum="Total de Facturas" string="Total de Factura"/>
+	              <field name="state"/>
+	             </tree> 	
+		      </field>
+                 </page>
+           </notebook>
+         </field>
+</record>
+ </data>
+</openerp>
