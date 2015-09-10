@@ -11,6 +11,5 @@
  "data": [
         "views/cliente_facturas_view.xml",
         ],
-    "auto_install": False,
     "installable": True,
 }

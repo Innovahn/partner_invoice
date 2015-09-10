@@ -10,6 +10,8 @@
            "account",],
  "data": [
         "views/cliente_facturas_view.xml",
+	"reports/report_facturas_view.xml",
+	"reports/report_facturas.xml",
         ],
     "installable": True,
 }

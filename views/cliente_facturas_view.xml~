@@ -11,12 +11,15 @@
 		       <div class="oe_right oe_button_box" name="followup_button">
                             <button name="do_print_payment" string="Imprimir pagos pendientes"/>
                         </div>			
-
+			<br/>
 			<p class="oe_grey">
                             A continuación está el historial de las transacciones de este cliente.
                             Puede marcar "No seguir" para excluirlo
                             de las siguientes acciones de seguimiento.
                         </p>
+			<group colspan="4">
+			<field name="monto_adeudado"/>
+			</group>
 		     <separator string="Estado de cuenta de cliente"/>
                       <field name="facturas_ids" nolabel="1" colspan="4" mode="tree">
 			<tree colors="blue:state == 'draft';black:state in ('proforma','proforma2','open');gray:state == 'cancel'" string="Invoice">
