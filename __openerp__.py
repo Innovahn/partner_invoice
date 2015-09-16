@@ -10,6 +10,7 @@
            "account",],
  "data": [
         "views/cliente_facturas_view.xml",
+	"views/facturas_partner_view.xml",
 	"reports/report_facturas_view.xml",
 	"reports/report_facturas.xml",
         ],

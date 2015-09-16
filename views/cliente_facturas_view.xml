@@ -20,11 +20,12 @@
 			</group>
 		     <separator string="Estado de cuenta de cliente"/>
                       <field name="facturas_ids" nolabel="1" colspan="4" mode="tree">
-			<tree colors="blue:state == 'draft';black:state in ('proforma','proforma2','open');gray:state == 'cancel'" string="Invoice">
+			<tree string="Invoice">
 	               <field name="number"/>
 	               <field name="date_invoice"/>
 			 <field name="date_due"/>
 			<field name="origin"/>
+			<field name="importe_abonado" sum="Importe Pagado" string="Importe Pagado"/>
 			<field name="residual" sum="Residual Amount"/>
 	               <field name="amount_total" sum="Total de Facturas" string="Total de Factura"/>
 	              <field name="state"/>

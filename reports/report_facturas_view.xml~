@@ -20,18 +20,24 @@
                         <table class="table table-condensed" style="margin-top: 50px;">
                             <thead>
                                 <tr>
+				    <th>No. Factura</th>	
                                     <th>Fecha de factura</th>
                                     <th>Fecha de Vencimiento</th>
-                                    <th class="text-center">Total de factura</th>
+				    <th>Referencia</th>	
+                                    <th class="text-center">Importe Abonado</th>
                                     <th class="text-center">Saldo pendiente</th>
+				    <th class="text-center">Total de factura</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr t-foreach="o.facturas_ids" t-as="a">
+				     <td><span t-fields="a.number"/></td>	
                                     <td><span t-field="a.date_invoice"/></td>
 				    <td><span t-field="a.date_due"/></td>
-				    <td class="text-center"><span t-field="a.amount_total"/></td>
+				    <td><span t-field="a.origin"/></td>
+				    <td class="text-center"><span t-field="a.importe_abonado"/></td>
 				    <td class="text-center"><span t-field="a.residual"/></td>
+				    <td class="text-center"><span t-field="a.amount_total"/></td>
                                 </tr>
                             </tbody>
                         </table>
